@@ -1,0 +1,83 @@
+@import '../../../style/_variables.scss';
+
+
+.brifs {
+    margin-top: 150px;
+    counter-reset: section;
+    margin-bottom: 150px;
+    &__descr {
+        margin-bottom: 76px;
+        max-width: 576px;
+        display: inline-block;
+        text-align: left;
+    }
+    &__category {
+
+        &_item {
+
+            display: block;
+            
+        }
+    }
+    &__title {
+        position: relative;
+        display: flex;
+        margin-bottom: 30px;
+        font-size: 45px;
+        line-height: 65.25px;
+        font-weight: 700;
+        color:  #E8EDF6;
+        &:before {
+            position: absolute;
+            top: 13px;
+            left: -39px;
+            counter-increment: section;
+            content: "0" counter(section);
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18.29px; 
+        }
+        p {
+            position: relative;
+            padding-left: 132px;
+            display: block;
+            padding-top: 19px;
+            margin: 0;
+            display: none;
+            color: $red;
+            animation: block 0.3s linear;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 30px;
+                width: 72px;
+                height: 1px;
+                background: $red;
+            }
+        }
+        
+        &:hover {
+            p {
+                display: block;
+            }
+        }
+    }
+}
+@keyframes block {
+    from {opacity: 0}
+
+    to {opacity: 100%}
+}
+
+@media (max-width: 768px) {
+    .brifs {
+        &__title {
+            font-size: 30px;
+            &::before {
+                top: 15px;
+            }
+        }
+    }
+}

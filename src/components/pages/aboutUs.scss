@@ -1,0 +1,188 @@
+@import '../../style/variables';
+
+.about {  
+    &__items {
+        display: flex;
+        margin: 0 86px;
+        justify-content: space-around;
+        margin-bottom: 162px;
+        counter-reset: section;
+    }
+    &__item {
+        flex-basis: 17%;
+        &:before {
+            content: "0"counter(section);
+            counter-increment: section;
+            color: red;
+        }
+        &_title {
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+            color: #1C1D28;
+        }
+        &_descr {
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 185%;
+            letter-spacing: 0.02em;
+            color: #1C1D28;
+        }
+    }
+}
+.about {
+    &__title {
+        position: relative;
+        margin-top: 78px;
+        max-width: 692px;
+        display: block;
+        &_h1 {
+            font-size: 200px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #F3F3F3;
+            display: block;
+            text-align: left;
+            line-height: 95%;
+            span {
+                font-size: 200px;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: #F3F3F3;
+                position: relative;
+                left: 7px;
+                line-height: 95%;
+            }
+        }
+        &_img {
+            position: absolute;
+            /* top: -88px; */
+            right: -40px;
+            bottom: -23px;
+        }
+    }
+    &__descr {
+        display: flex;
+        margin: 160px auto;
+        max-width: 920px;
+        justify-content: space-between;
+        &_title {
+            font-weight: 500;
+            display: block;
+            font-size: 30px;
+            line-height: 145%;
+            letter-spacing: .02em;
+            color: #1c1d28;
+            margin: 0;
+        }
+        &_text {
+            font-weight: 400;
+            flex-basis: 606px;
+            font-size: 15px;
+            line-height: 185%;
+            letter-spacing: .02em;
+            color: #1c1d28;
+            display: block;
+            margin: 0;
+        }
+    }  
+}
+
+.about {
+    &__maps {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        
+        margin-bottom: 131px;
+        &_items {
+            
+        }
+        &_item {
+            display: block;
+            width: 32px;
+            height: 32px;
+            background-color: $red;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            position: absolute;
+            font-weight: 500;
+            font-size: 13px;
+            letter-spacing: 0.02em;
+            padding: 4px;
+            transition-property: width,height;
+            transition: 0.8s;
+            &:hover {
+                transition: 0.5s;
+                width: 54px;
+                height: 54px;
+                padding: 15px;
+                transition: 0.3s;
+                font-size: 15px;
+            }
+            &:first-child {
+                top: 40%;
+                right: 36%;
+            }
+            &:nth-child(2) {
+                top:  51%;
+                left: 49%;
+            }
+            &:nth-child(3) {
+                top: 56%;
+                right: 34%;
+            }
+            &:nth-child(4) {
+                bottom: 29%;
+                left: 49%;
+            }
+
+            &:nth-child(5) {
+                bottom: 43%;
+                left: 28%;
+            }
+            &:nth-child(6) {
+                bottom: 18%;
+                left: 35%;
+            }
+            &:last-child {
+                bottom: 13%;
+                right: calc(24% + 10px);
+            }
+        }
+        &_title {
+            text-align: center;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+            color: #1C1D28;        
+        }
+        &_img {
+            margin: 0 auto;
+            margin-top: 50px;
+            display: block;
+        }
+        &_stat {
+            position: absolute;
+            bottom: -45px;
+            left: 85px;
+        }
+        &_qty {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 45px;
+            span {
+                margin: 0;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 145%;
+                letter-spacing: 0.02em;
+                color: #1C1D28;
+            }
+        }
+        
+    }
+}

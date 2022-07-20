@@ -1,0 +1,190 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+@import './button';
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 185%;
+    letter-spacing: 0.02em;
+    color: $black;
+    margin: 0 auto;
+}
+.container {
+    max-width: 1110px;
+}   
+h1 {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 145%;
+}
+h2 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 145%;
+} 
+.title {
+    &_15px {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 185%;
+        letter-spacing: 0.02em;
+        color: $black;
+    } 
+    &_h2 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+    }
+    &_h3 {
+       font-weight: 500;
+        font-size: 30px;
+        line-height: 145%; 
+        margin-bottom: 25px;
+    }
+    &_h4 {
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 145%;
+    }
+    &_h5 {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 145%;
+        letter-spacing: 0.05em;
+    }
+}       
+a {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    text-decoration: none;
+    color: $black;
+    &:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        color: $red;
+    } 
+}
+.link {
+    &_12px {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+    } 
+    &_13px {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    &_15px {
+        font-size: 15px;
+        line-height: 145%;
+    }
+}     
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .container {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+    .title {
+        &_15px {
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 185%;
+            letter-spacing: 0.02em;
+            color: $black;
+        } 
+        &_h2 {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+        }
+        &_h3 {
+           font-weight: 500;
+            font-size: 20px;
+            line-height: 145%; 
+            margin-bottom: 25px;
+        }
+        &_h4 {
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 145%;
+        }
+        &_h5 {
+            font-weight: 300;
+            font-size: 10px;
+            line-height: 145%;
+            letter-spacing: 0.05em;
+        }
+    }
+    a {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 28px;
+        text-decoration: none;
+        color: $black;
+        &:hover {
+            cursor: pointer;
+            transition: 0.3s;
+            color: $red;
+        } 
+    }
+    .link {
+        &_12px {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+        } 
+        &_13px {
+            font-size: 13px;
+            line-height: 16px;
+        }
+        &_15px {
+            font-size: 15px;
+            line-height: 145%;
+        }
+    } 
+}
+
+@media (max-width: 425px) {
+    *{
+        font-size: 13px;
+    }
+    .container {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+    .button {
+        width: 129px;
+        height: 33px;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+    }
+    h1 {
+        font-size: 25px;
+    } 
+    h2 {
+        font-size: 15px;
+    }  
+    .link {  
+        &_12px {
+            font-size: 12px;
+        }
+        &_15px {
+            font-size: 15px;
+        }
+    }
+    
+}

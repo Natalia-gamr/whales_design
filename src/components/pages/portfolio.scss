@@ -1,0 +1,45 @@
+@import '../../style/variables';
+
+.portfolio {
+    margin-top: 67px;
+    &__title {
+        text-align: center;
+        &:after {
+            content: '';
+            display: block;
+            width: 428px;
+            margin: 40px auto;
+            height: 1px;
+            background: #EEEEEE;
+        }
+    }
+    &__category {
+        display: flex;
+        max-width: 1110px;
+        &_link {
+            display: block;
+            padding: 10px;
+
+            &:hover, &:focus {
+                cursor: pointer;
+                transition: 0.3s;
+                color:$red;
+                box-shadow: 0px -1px 0 $red inset
+            }
+        }
+    }
+    &__content {
+        margin-top: 90px;
+        &_item {
+            display: flex;
+            flex-wrap: wrap;
+            a {
+                width: 33.3%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

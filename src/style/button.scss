@@ -1,0 +1,51 @@
+.button {
+    width: 171px;
+    height: 41px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    border: 1px solid;
+    transition-property: background-color, border, color;
+    transition: 0.5s;
+    &_blue {
+        background-color: $blue;
+        color: $white;
+        border-color: $blue;
+        &:hover {
+            cursor: pointer;
+            background-color: $red;
+            border-color: $red;
+        }
+    }
+    &_white {
+        background-color: white;
+        border-color: $blue;
+        color: $blue;
+        &:hover {
+            cursor: pointer;
+            background-color: $blue;
+            border-color: $blue;
+            color: $white;
+        }
+    }
+    &_red {
+        background-color: $red;
+        color: $white;
+        border-color: $red;
+        &:hover {
+            cursor: pointer;
+            background-color: transparent;
+            border-color: $blue;
+            color: $blue;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .button {
+        width: 129px;
+        height: 33px;
+        font-size: 10px;
+    }
+}
+    

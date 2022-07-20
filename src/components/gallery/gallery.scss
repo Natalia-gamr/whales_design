@@ -1,0 +1,18 @@
+.gallery {
+    margin-top: 120px;
+    margin-bottom: 100px;
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        margin-top: 80px;
+        img {
+            margin-bottom: 10px;
+        }
+    }
+    a {
+        display: block;
+        text-align: center;
+    }
+}

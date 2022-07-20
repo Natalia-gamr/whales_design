@@ -1,0 +1,155 @@
+@import '../../style/variables';
+
+.project {
+    margin: 100px 85px;
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+    &__heading {
+        margin-top: 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &_wrap {
+            flex-basis: 434px;
+            margin: 0;
+        }
+        &_title {
+            margin-bottom: 30px;
+        }
+        &_descr {
+            margin-bottom: 56px;
+        }
+        &_buttons {
+            display: flex;
+            justify-content: flex-start;
+            a:first-child {
+                margin: 0;
+            }
+        }
+    }
+    
+
+}
+.price {
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        margin: 66px 0;
+        &_five {
+            display: flex;
+            margin: 66px 0;
+            flex-wrap: wrap;
+            .price__item {
+                flex-basis: 298px;
+                &:last-child {
+                    min-width: 668px;
+                    .price__descr {
+                        margin-top: 197px;
+                        max-width: 370px;
+                    }
+                    .price__text {
+                        margin: 20px 0;
+                    }
+                }
+            }
+            
+        }
+    }
+    &__item {
+        border: 2px solid #E4E4E4;
+        flex-basis: 33.33%;
+        margin: 0;
+        text-align: center;
+        transition-property: outline;
+        transition: 0.5s;
+        padding: 34px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 27px;
+            height: 50px;
+            background-image: url('../../resources/icons/bookmark-fill.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: -1px;
+            right: 25px;
+            display: none;
+        }
+        &:hover {
+            // border: 1px solid $blue;
+            border: 2px solid $blue;
+            &::before {
+                display: block;
+            }
+        }
+    }
+    &__name {
+        font-weight:bold;
+    }
+    &__cost {
+        margin: 40px 0;
+    }
+    &__items {
+        text-align: left;
+        margin-left: 23px;
+        margin-top: 85px;
+            div {
+            position: relative;
+            margin-bottom: 8px;
+            &:before {
+                content: '';
+                width: 17px;
+                height: 17px;
+                background-image: url('../../resources/icons/check2.svg');
+                position: absolute;
+                top: 6px;
+                left: -26px;
+            }
+        }
+    }
+}
+.descr {
+    padding: 75px 0;
+    text-align: left;
+    &__text {
+        max-width: 950px;
+        margin-left: 0;
+    }
+}
+.info {
+    background: $blue;
+    color: white;
+    padding: 75px 0;
+    .title_h3 {
+        color: white;
+    }
+    &__descr {
+        color: white;
+        margin-bottom: 49px;
+    }
+    &__items {
+        display: flex;        
+        flex-wrap: wrap;
+    }
+    &__item {
+        color: white;
+        flex-basis: 45%;
+        padding-bottom: 24px;
+        padding-left: 41px;
+        margin: 0;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 24px;
+            height: 1px;
+            position: absolute;
+            top: 25%;
+            left: 0;
+            background: white;
+        }
+    }
+}

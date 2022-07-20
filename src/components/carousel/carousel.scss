@@ -1,0 +1,123 @@
+@import '../../style/variables.scss';
+
+.main {
+    &__slider {
+        max-width: 52%;
+        margin: 0 auto;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        &_item {
+            text-align: left;
+            position: relative;
+        }
+    }
+    &__heading {
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 145%;
+        max-width: 100px;
+        position: absolute;        
+    }
+}
+.heading {
+    &_graph {
+        top: 29px;
+        left: 0px;
+    } 
+    &_brend {
+        top: 56px;
+        left: 65px;
+    }
+    &_web {
+        top: 127px;
+        left: 0px;
+    }
+}
+.slick {
+    &-slider {
+    position: static;
+    }
+    &-dots {
+        text-align: left;
+        left: 95px;
+        bottom: 77px;
+        color: $blue;
+        li button:before {
+            color: grey;
+        }
+        li.slick-active button:before {
+            color: $blue;        
+
+        }
+        li.slick-active button:after {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border-top: 1px solid #E3E3E3;
+            border-bottom: 1px solid #E3E3E3;
+            border-left: 1px solid #E3E3E3;
+            border-right: 1px solid #E3E3E3;
+            border-radius: 50%;
+            animation: border 5s linear;
+            transform: rotate(45grad);
+        }
+    }
+}
+
+@keyframes border {
+    0% {
+        border-top: 1px solid $blue;
+    }
+    25% {
+        border-top: 1px solid $blue;
+        border-right: 1px solid $blue;
+    }
+    75%{
+        border-top:1px solid $blue;
+        border-right:1px solid $blue;
+        border-bottom:1px solid $blue;
+    }
+    100% {
+        border-top:1px solid $blue;
+        border-left:1px solid $blue;
+        border-bottom:1px solid $blue;
+        border-right:1px solid $blue;
+    }
+}
+
+@media (max-width:768px) {
+    .main {
+        &__heading {
+            font-size: 30px;
+        }
+        button {
+            margin: 0;
+        }
+    }
+    .heading {
+        &_graph {
+            top: 45px;
+            left: 6px;
+        } 
+        &_brend {
+            top: 56px;
+            left: 30px;
+        }
+        &_web {
+            top: 121px;
+            left: 0px;
+        }
+    }
+    .slick {
+        &-dots {
+            left: 79px;
+            bottom: 50px;
+        }
+    }
+}

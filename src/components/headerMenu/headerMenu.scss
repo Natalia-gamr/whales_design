@@ -1,0 +1,156 @@
+@import '../../style/variables.scss';
+
+.header {
+    .container {
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+        display: flex;
+    }
+    &__blue {
+     background: $blue;
+        .container {
+            
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;   
+            display: flex;
+        }
+        svg {
+            fill: white
+        }
+        a {
+            
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+    }
+    &__menu {
+        display: flex;
+        li {
+            display: block;
+            &:not(:first-child) {
+                margin-left: 45px;
+            }
+        }
+        &_burger {
+            display: none;
+        }
+    }               
+    &__tel {
+        font-weight: 700;
+        margin-left: 197px;
+        margin-right: 45px;
+    }           
+}
+
+@media (max-width: 768px) {
+    .header{
+        max-width: 728px;
+        svg {
+            width: 46px;
+        }
+        &__logo {
+            margin-right: 46px;
+            margin-left: 0;
+            width: 49px;
+            height: 49px;
+        }
+        &__menu {
+            justify-content: space-between;
+            padding: 0;
+            li:not(:first-child) {
+                margin-left: 26px;
+            }
+            a {
+                font-size: 10px;
+            }
+        }
+        
+        &__tel {
+            flex-basis: 21%;
+            margin: 0;
+            display: inline;
+            text-align: center;
+            font-size: 10px;
+        }
+        
+    }
+    
+}
+
+@media (max-width: 425px) {
+    .header{
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        &__logo {
+            margin-left: 10px;
+            
+        }
+        &__menu {
+            display: none;
+            &_burger {
+                display: block;
+                z-index: 20;
+                &_links {
+                    display: block;
+                    background: $blue;
+                    position: absolute;
+                    width: 375px;
+                    top: 0;
+                    left: 0;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        float: none; 
+                        display: block;
+                        padding-bottom: 40px;
+                        text-align: center;
+                        div {
+                            color: $white;
+                        }
+                    }
+                }
+                &_icon {
+                    display: inline-block; 
+                    position: absolute;
+                    right: 10px;
+                    top: 18px;
+                }
+                &_head {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 10px;
+                    padding-bottom: 59px;
+                    img {
+                        margin: 0;
+                    }
+                }
+                &_button {
+                    margin: 0 auto;
+                    display: block;
+                    background: $red;
+                    width: 375px;
+                    height: 59px;
+                    margin-top: 174px;
+                    color: $white;
+                    font-size: 15px;
+                    border: none;
+                    &:hover {
+                        background: $white;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        &__tel {
+            display: none;
+        }
+        
+    }
+    
+}

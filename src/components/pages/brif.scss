@@ -1,0 +1,125 @@
+@import '../../style/variables';
+
+.brif {
+    margin: 0 370px;
+    display: block;
+    &__heading {
+        margin-top: 186px;
+        margin-bottom: 150px;
+        max-width: 372px;
+        text-align: center;
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35px;
+        border-bottom: 1px solid #A7A7A7;
+        margin: 0 0 35px;
+        flex-basis: 45%;
+        label {
+            margin: 0;           
+            font-weight: 500;
+        }
+        input {
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 35px;
+            margin-top: 12px;
+        } 
+        select {
+            border: none;
+            padding: 10px 0;
+            outline: none;
+            margin: 0;
+        }
+    }
+    &__items {
+        display: none;
+        &_block {
+            display: block;
+            max-width: 523px;
+            margin: 158px auto;
+            .title_h3 {
+                margin-top: 100px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+    } 
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        .checkbox { 
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $black;
+            background: transparent;
+            margin: 0 20px 0 0;
+        }
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: auto;
+            display: none; 
+        }
+        
+        input {
+            -webkit-appearance: none; 
+            position: absolute; 
+        }
+        input:checked ~ .checkbox .checkmark {
+            display: block; 
+        }
+        input:checked ~ .checkbox {
+            background: $blue;
+            border: 1px solid $blue;
+        }
+    } 
+    &__file {
+        position: relative;
+        margin-bottom: 50px;
+        input {
+            opacity: 0;
+            height: 200px;
+        }
+        label {
+            &:before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 523px;
+                height: 200px;
+                border: 2px dashed #A7A7A7;
+                ;
+                background-image: url('../../resources/icons/download.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            } 
+        }
+        
+    }
+    &::placeholder {
+        font-size: 12px;
+        color: rgba(151, 151, 151, 0.5);
+        font-weight: 400;
+    }    
+}  
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+@import '../../../style/variables.scss';
+
+
+.main {
+    &__container {
+        display: flex;
+        padding: 0 65px;
+        margin-top: 67px;
+        justify-content: space-between;   
+        position: relative;
+
+    }    
+    &__descr {
+        padding-top: 54px;
+        max-width: 261px;
+        margin: 0;
+    }       
+    &__name {
+        padding-top: 18px;
+    }          
+    
+    &__button {
+        margin: 41px 0;
+        background-color: transparent;
+        border: 1px solid $blue;
+        color: $blue;
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    } 
+    &__img {
+        width: 438px;
+        height: 452px;
+    } 
+    span {
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 145%;
+    }    
+}
+
+@media (max-width: 768px) {
+    .main {
+        &__img {
+            width: 308px;
+            height: 318px;
+        }  
+        span {
+            font-size: 20px;
+        }  
+    }
+    
+}
+@media (max-width: 480px) {
+    .main {
+        &__container {
+            display: block;
+            padding: 0;
+        }    
+        &__descr {
+            padding-top: 45px;
+            max-width: 85%;
+            margin: 0;
+        }       
+        &__name {
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }          
+        
+        &__button {
+            margin: 41px 0;
+            background-color: transparent;
+            border: 1px solid $blue;
+            color: $blue;
+            &:hover {
+                background-color: $blue;
+                color: $white;
+            }
+        } 
+        &__img {
+            width: 282px;
+    height: 100%;
+        }
+        .heading {
+            &_graph {
+                top: 29px;
+                left: 0px;
+            } 
+            &_brend {
+                top: 56px;
+                left: 65px;
+            }
+            &_web {
+                top: 106px;
+                left: 0px;
+            }
+        }
+        span {
+            font-size: 15px;
+        }    
+    }
+}
+    
+

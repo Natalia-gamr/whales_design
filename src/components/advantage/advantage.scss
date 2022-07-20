@@ -1,0 +1,20 @@
+
+.advantage {
+    margin-bottom: 130px;
+    &_wrap {
+        flex-basis: 22%;
+        margin-top: 70px;
+        img {
+            margin:25px 0 ;
+            height: 50px;
+        }
+    }
+    &_items {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    
+}

@@ -1,0 +1,15 @@
+.page404 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 120px;
+    margin-top: 90px;
+    &__descr {
+        margin: 0;
+        max-width: 300px;
+    }
+    &__img {
+        margin: 0;
+    }
+
+}

@@ -1,0 +1,48 @@
+@import '../../style/variables';
+.contacts {
+    &__title {
+        position: relative; 
+        font-weight: 900;
+        font-size: 200px;
+        line-height: 145%;
+        text-transform: uppercase;
+        color: #F3F3F3;
+        display: block;
+        margin: 0 auto;
+        text-align: center;   
+    }
+    &__descr {
+        margin-bottom: -120px;
+        display: flex;
+        justify-content: space-between;
+        &_img {
+            position: relative;
+            bottom: 216px;
+            left: 20%;
+            margin: 0;
+        }
+    }
+    &__items {
+        display: block;
+        text-align: left;
+        margin-bottom: 40px;        
+        &_link {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 145%;
+            display: block;
+            margin-bottom: 20px;
+            color: #434343;
+        }
+    }
+    &__icon {
+        margin-right: 30px;
+        &:hover {
+            svg {
+                transition: 0.3s;
+                fill: $red;
+            }
+        }
+    }
+        
+}

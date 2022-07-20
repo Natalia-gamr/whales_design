@@ -1,0 +1,18 @@
+@import '../../style/variables';
+
+
+.single {
+    position: relative;
+    &__header {
+        background: $blue;
+        img {
+            display: block;
+            vertical-align: middle;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+

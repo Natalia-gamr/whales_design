@@ -1,0 +1,209 @@
+@import '../../style/variables.scss';
+
+.feedback {
+    background-color: $blue;
+    padding: 133px 0 0 65px;
+    display: flex;  
+    justify-content: center;
+    button {
+        border: none;
+    }
+    &__heading {
+        margin: 0;
+    }
+    &__title {
+        margin-bottom: 25px;
+        color: $white;
+    }
+    &__descr {
+        color: $white;
+        max-width: 255px;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+    &__img {
+        position: relative;
+        left: -123px;
+        margin-bottom: -9px;
+    }
+    &__form {
+        margin: 0;
+        flex-basis: 523px;
+        ::-webkit-input-placeholder {
+            color: $white;
+            opacity: 30%;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        label {
+            display: block;
+            color: white;
+        }
+        input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $white;
+            padding-bottom: 10px;
+        }
+        &_item {
+            border-bottom: 1px solid $white;
+            color: $white;
+            
+        }    
+        &_contacts {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px;
+            margin-top: 35px;
+            div {
+                flex-basis: 45%;
+                margin: 0;
+            }
+            
+        }    
+        
+        
+        &_submit {
+            display: flex;
+            margin-top: 63px;
+            align-items: center;
+        }
+        &_button {
+            color: $white;
+            background-color: $red;
+            margin-right: 37px;
+            &:hover {
+                background-color: $white;
+                color: $blue;
+            }
+            &_mobile {
+                display: none;
+            }
+        }
+        &_check {
+            position:relative;
+            padding-left:25px;
+            opacity: 0.8;
+            display: flex;
+            label {
+                font-size: 10px;
+                line-height: 145%;
+                margin-left: 6px;
+                padding-top: 2px;
+            }
+            input {
+                opacity: 1;
+                position: absolute;
+                left: -3px;
+                width: 0px;
+                height: 0px;
+                
+            }
+            input:before {
+                content:'';
+                display:block;
+                height:17px;
+                width:17px;
+                border:1px solid $white;
+                position:absolute;
+                top:0px;
+                left:-3px;
+            }
+            input[type=checkbox]:checked  {
+                &:before { 
+                    background-image: url(../../resources/icons/check-lg.svg);
+                }
+            } 
+            
+        } 
+              
+    }
+}
+
+@media (max-width: 768px) {
+    .feedback {
+        display: block;
+        padding: 96px 0;
+        &__heading {
+           text-align: center;
+        }
+        &__descr {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        &__img {
+            display: none;
+        }
+        &__form {
+            max-width: 523px;
+            margin: 60px auto;   
+            &_contacts {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 35px;
+                margin-top: 35px;
+                div {
+                    flex-basis: 45%;
+                    margin: 0;
+                }
+                
+            } 
+            &_button {
+                width: 171px;
+                height: 41px;
+                font-size: 13px;
+                margin-left: 0;
+            }
+        }
+    }    
+}
+        
+
+@media (max-width: 425px) {
+    .feedback {
+        &__container { 
+            padding: 66px 0;   
+        }
+        &__descr {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+        &__form {
+            max-width: 100%;
+            margin-top: 50px;   
+            &_contacts {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 35px;
+                margin-top: 35px;
+                div {
+                    flex-basis: 45%;
+                    margin: 0;
+                }
+                
+            } 
+            &_check {
+                display: none;
+            }  
+            &_button {
+                display: none;
+                &_mobile {
+                    display: block;
+                    color: $white;
+                    background-color: $red;
+                    border: none;
+                    width: 301px;
+                    height: 33px;
+                    margin: 0 auto;
+                    &:hover {
+                        background-color: $white;
+                        color: $blue;
+                    }
+                }
+            }  
+        }
+          
+    }    
+}
+        
