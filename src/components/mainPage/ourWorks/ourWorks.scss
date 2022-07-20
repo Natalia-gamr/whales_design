@@ -68,3 +68,15 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .our-works {
+        &__tabs_content {
+            max-width: 768px;
+            margin-left: -26px;
+        }
+        &__tabwrap {
+            display: none;
+        }
+    }
+}

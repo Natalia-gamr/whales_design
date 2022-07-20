@@ -81,3 +81,19 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .brifs {
+        &__title {
+            font-size: 30px;
+            &::before {
+                top: 21px;
+            }
+            &:hover {
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}

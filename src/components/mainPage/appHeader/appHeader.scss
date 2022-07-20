@@ -57,11 +57,12 @@
         &__container {
             display: block;
             padding: 0;
+            margin: 10px;
         }    
         &__descr {
-            padding-top: 45px;
-            max-width: 85%;
-            margin: 0;
+            padding: 0;
+            max-width: 72%;
+            margin: 0px 0 50px;
         }       
         &__name {
             padding-top: 0px;
@@ -82,20 +83,7 @@
             width: 282px;
     height: 100%;
         }
-        .heading {
-            &_graph {
-                top: 29px;
-                left: 0px;
-            } 
-            &_brend {
-                top: 56px;
-                left: 65px;
-            }
-            &_web {
-                top: 106px;
-                left: 0px;
-            }
-        }
+        
         span {
             font-size: 15px;
         }    

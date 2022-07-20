@@ -27,9 +27,9 @@ const Feedback= () => {
                 }}
                 >
                 <Form className="feedback__form">
-                        <div className="feedback__form_item">
+                    <div className="feedback__form_item">
                         <label htmlFor="name">Ваше имя*</label>
-                    <Field id="name" name="name" placeholder="Введите ваше имя" />
+                        <Field id="name" name="name" placeholder="Введите ваше имя" />
                     </div>
                     <div className="feedback__form_contacts">
                         <div className="feedback__form_item">

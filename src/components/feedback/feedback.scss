@@ -160,50 +160,35 @@
 }
         
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     .feedback {
-        &__container { 
-            padding: 66px 0;   
-        }
+        max-width: 100%;
+        padding: 50px 10px;
         &__descr {
             max-width: 85%;
             margin: 0 auto;
         }
-        &__form {
-            max-width: 100%;
-            margin-top: 50px;   
+        &__form {  
             &_contacts {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 35px;
-                margin-top: 35px;
+                display: block;
+                margin: 0; 
                 div {
-                    flex-basis: 45%;
-                    margin: 0;
-                }
-                
+                    margin-bottom: 25px;
+                }               
             } 
+            &_item {
+                margin-bottom: 25px;
+            }
+            &_button {
+                display: block;
+                width: 100%;
+            }
             &_check {
                 display: none;
             }  
-            &_button {
-                display: none;
-                &_mobile {
-                    display: block;
-                    color: $white;
-                    background-color: $red;
-                    border: none;
-                    width: 301px;
-                    height: 33px;
-                    margin: 0 auto;
-                    &:hover {
-                        background-color: $white;
-                        color: $blue;
-                    }
-                }
-            }  
         }
           
-    }    
+    } 
+       
 }
         

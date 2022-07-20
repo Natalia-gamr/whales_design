@@ -121,3 +121,27 @@
         }
     }
 }
+
+@media (max-width:480px) {
+    .main__slider {
+       max-width: 100%;
+    }
+    .slick {
+        &-dots {
+            li {
+                display: none;
+            }
+        }
+    }
+    .heading {
+        &_brend {
+            top: 23px;
+            left: 58px;
+        }
+        &_web {
+            top: 178px;
+            left: 0px;
+        }
+    }
+    
+}
