@@ -52,10 +52,10 @@ const HeaderMenu = () => {
                 </button>
                 <div className={`header__menu_burger${burgerOpen ? '_show' : ''}`}>
                     <ul className="header__menu_burger_links">
-                        <li><NavLink to='/portfolio' className="header__link link_15px">Портфолио</NavLink></li>
-                        <li><NavLink to='/services'  className="header__link link_15px">Услуги и цены</NavLink></li>
-                        <li><NavLink to='/about_us' className="header__link link_15px">Мы</NavLink></li>
-                        <li><NavLink to='/contacts' className="header__link link_15px">Контакты</NavLink></li>
+                        <li><NavLink to='/portfolio' onClick={buttonToggle} className="header__link link_15px">Портфолио</NavLink></li>
+                        <li><NavLink to='/services' onClick={buttonToggle}  className="header__link link_15px">Услуги и цены</NavLink></li>
+                        <li><NavLink to='/about_us' onClick={buttonToggle} className="header__link link_15px">Мы</NavLink></li>
+                        <li><NavLink to='/contacts' onClick={buttonToggle} className="header__link link_15px">Контакты</NavLink></li>
                         <button className="header__menu_burger_button button">Обсудить проект</button>
                     </ul>
                 </div>

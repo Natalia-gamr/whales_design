@@ -36,6 +36,9 @@
         }
         &_burger {
             display: none;
+            &_open {
+                display: none;
+            }
         }
     }               
     &__tel {

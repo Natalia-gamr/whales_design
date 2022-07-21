@@ -1,17 +1,17 @@
 import './aboutUs.scss'
-import maps from '../../resources/img/Geogr.png'
+import maps from '../../resources/img/Geogr.svg'
 import whale from '../../resources/img/whaleabout.png'
 
 const AboutUs = () => {
     return (
-        <section className="about">
+        <section className="about container">
             <div>
                 <div className="about__title">
                     <div className="about__title_h1">Wha<br/><span>les</span></div>
                     <img className="about__title_img" src={whale} alt=""/>
                 </div>
                 <div className="about__descr">
-                    <div className="about__descr_title">О нас</div>
+                    <div className="title_h3">О нас</div>
                     <div className="about__descr_text">Мы помогаем упаковывать бизнес по всему миру, и создаем дизайн, 
                         который, остается актуальным и вызывает эмоции даже в нашу эпоху фаст-фуд информации! 
                         <br/><br/>
@@ -20,37 +20,28 @@ const AboutUs = () => {
             </div>
             <div className="about__items">
                 <div className="about__item">
-                    <div className="about__item_title">Экономия</div>
-                    <div className="about__item_descr">Отсутствие офиса, помогает нам оказывать услуги премиального качества, 
+                    <div className="title_h2">Экономия</div>
+                    <div>Отсутствие офиса, помогает нам оказывать услуги премиального качества, 
                         за более низкую цену</div>
                 </div>
                 <div className="about__item">
-                    <div className="about__item_title">Скорость</div>
-                    <div className="about__item_descr">У нас небольшая команда,
+                    <div className="title_h2">Скорость</div>
+                    <div>У нас небольшая команда,
                         а значит принятие решений занимает гораздо меньшее количество времени</div>
                 </div>
                 <div className="about__item">
-                    <div className="about__item_title">Прозрачность</div>
-                    <div className="about__item_descr">Сразу после начала работы, вы будете подключены к нашему удаленному офису, где напрямую сможете общаться с Дизайнером, Менеджером или же Руководителем агентства</div>
+                    <div className="title_h2">Прозрачность</div>
+                    <div>Сразу после начала работы, вы будете подключены к нашему удаленному офису, где напрямую сможете общаться с Дизайнером, Менеджером или же Руководителем агентства</div>
                 </div>
                 <div className="about__item">
-                    <div className="about__item_title">Удобство</div>
-                    <div className="about__item_descr">Мы будем предоставлять вам регулярные отчеты 
+                    <div className="title_h2">Удобство</div>
+                    <div>Мы будем предоставлять вам регулярные отчеты 
                         о стадии на которой, находится ваш дизайн</div>
                 </div>
             </div>
             <div className="about__maps">
-                <div className="about__maps_title">География наших клиентов</div>
+                <div className="title_h3">География наших клиентов</div>
                 <img src={maps} alt="" className="about__maps_img"/>
-                <div className="about__maps_items">
-                    <div className="about__maps_item">45</div>
-                    <div className="about__maps_item">125</div>
-                    <div className="about__maps_item">15</div>
-                    <div className="about__maps_item">4</div>
-                    <div className="about__maps_item">35</div>
-                    <div className="about__maps_item">8</div>
-                    <div className="about__maps_item">3</div>
-                </div>
                 <div className="about__maps_stat">
                     <div className="about__maps_qty"><span>55+</span>стран по всему миру</div>
                     <div className="about__maps_qty"><span>235+</span>довольных клиентов</div>

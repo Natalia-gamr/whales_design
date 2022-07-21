@@ -1,37 +1,6 @@
 @import '../../style/variables';
 
 .about {  
-    &__items {
-        display: flex;
-        margin: 0 86px;
-        justify-content: space-around;
-        margin-bottom: 162px;
-        counter-reset: section;
-    }
-    &__item {
-        flex-basis: 17%;
-        &:before {
-            content: "0"counter(section);
-            counter-increment: section;
-            color: red;
-        }
-        &_title {
-            font-weight: bold;
-            font-size: 30px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            color: #1C1D28;
-        }
-        &_descr {
-            font-weight: normal;
-            font-size: 15px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-            color: #1C1D28;
-        }
-    }
-}
-.about {
     &__title {
         position: relative;
         margin-top: 78px;
@@ -57,7 +26,6 @@
         }
         &_img {
             position: absolute;
-            /* top: -88px; */
             right: -40px;
             bottom: -23px;
         }
@@ -67,108 +35,49 @@
         margin: 160px auto;
         max-width: 920px;
         justify-content: space-between;
-        &_title {
-            font-weight: 500;
-            display: block;
-            font-size: 30px;
-            line-height: 145%;
-            letter-spacing: .02em;
-            color: #1c1d28;
+        .title_h3 {
             margin: 0;
         }
         &_text {
-            font-weight: 400;
             flex-basis: 606px;
-            font-size: 15px;
-            line-height: 185%;
-            letter-spacing: .02em;
-            color: #1c1d28;
-            display: block;
             margin: 0;
         }
-    }  
-}
-
-.about {
+    } 
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 162px;
+        counter-reset: section;
+    }
+    &__item {
+        flex-basis: 17%;
+        &:before {
+            content: "0"counter(section);
+            counter-increment: section;
+            color: $red;
+        }
+        
+    }
+     
     &__maps {
         display: block;
         margin: 0 auto;
         position: relative;
-        
         margin-bottom: 131px;
-        &_items {
-            
-        }
-        &_item {
-            display: block;
-            width: 32px;
-            height: 32px;
-            background-color: $red;
-            color: white;
-            border-radius: 50%;
+        .title_h3 {
             text-align: center;
-            position: absolute;
-            font-weight: 500;
-            font-size: 13px;
-            letter-spacing: 0.02em;
-            padding: 4px;
-            transition-property: width,height;
-            transition: 0.8s;
-            &:hover {
-                transition: 0.5s;
-                width: 54px;
-                height: 54px;
-                padding: 15px;
-                transition: 0.3s;
-                font-size: 15px;
-            }
-            &:first-child {
-                top: 40%;
-                right: 36%;
-            }
-            &:nth-child(2) {
-                top:  51%;
-                left: 49%;
-            }
-            &:nth-child(3) {
-                top: 56%;
-                right: 34%;
-            }
-            &:nth-child(4) {
-                bottom: 29%;
-                left: 49%;
-            }
-
-            &:nth-child(5) {
-                bottom: 43%;
-                left: 28%;
-            }
-            &:nth-child(6) {
-                bottom: 18%;
-                left: 35%;
-            }
-            &:last-child {
-                bottom: 13%;
-                right: calc(24% + 10px);
-            }
-        }
-        &_title {
-            text-align: center;
-            font-weight: 500;
-            font-size: 30px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            color: #1C1D28;        
         }
         &_img {
             margin: 0 auto;
             margin-top: 50px;
             display: block;
+            width: 1039px;
+            max-width: 100%;
         }
         &_stat {
             position: absolute;
             bottom: -45px;
-            left: 85px;
+            left: 0;
         }
         &_qty {
             display: flex;
@@ -179,10 +88,90 @@
                 font-weight: 500;
                 font-size: 30px;
                 line-height: 145%;
-                letter-spacing: 0.02em;
-                color: #1C1D28;
             }
         }
         
     }
 }
+
+@media (max-width: 768px) {
+    .about {  
+        &__title {
+            max-width: 520px;
+            &_h1 {
+                font-size: 140px;
+                span {
+                    font-size: 140px;
+                }
+            }
+            &_img {
+                max-width: 286px;
+                right: 0px;
+            }
+        }
+        &__descr {
+           flex-direction: column;
+        }  
+        &__items {
+           flex-wrap: wrap;
+        }
+        &__item {
+            flex-basis: 50%;
+            max-width: 250px;
+            margin-bottom: 40px;
+        }
+        &__maps {
+            &_img {
+                max-width: 70%;
+                margin-right: 20px;
+            }
+            &_qty {
+                span {
+                    font-size: 20px;
+                }
+            }
+            
+        }
+    }  
+}
+@media (max-width: 480px) {
+    .about {  
+        &__title {
+            max-width: 184px;
+            margin-top: 0;
+            &_h1 {
+                font-size: 50px;
+                span {
+                    font-size: 50px;
+                }
+            }
+            &_img {
+                max-width: 102px;
+                right: 0px;
+            }
+        }
+         
+        
+        &__item {
+            flex-basis: 100%;
+            margin-left: 0;
+            max-width: 100%;
+        }
+        &__maps {
+            &_img {
+                max-width: 100%;
+                margin-right: 20px;
+                margin-top: 180px;
+            }
+            &_stat {
+                top: 20px;
+                span {
+                    font-size: 20px;
+                    top: 0;
+                }
+            }
+            
+        }
+    }  
+}
+    
