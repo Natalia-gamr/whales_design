@@ -1,8 +1,5 @@
-
-
 import './singlePage.scss'
 import single from '../../resources/img/dog.png'
-
 
 const SinglePage = () => {
     return (

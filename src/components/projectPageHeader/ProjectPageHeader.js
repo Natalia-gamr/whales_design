@@ -11,9 +11,6 @@ import  {LogoPrice, LogoImg } from "./logo/Logo";
 import {PresentPrice,  PresentImg } from "./presentation/Presentation";
 
 
-
-
-
 const ProjectPageHeader = () => {
 
     const {arr} = useWhalesService()
@@ -59,10 +56,10 @@ const ProjectPageHeader = () => {
     return (
         <>
             <div className="project__header container">
-                <div className="project__heading_wrap">
-                    <h2 className="project__heading_title title_h2">{`Разработка ${service.title}`}</h2>
-                    <div className="project__heading_descr">{service.pageDescr}</div>
-                    <div className="project__heading_buttons">
+                <div className="project__header_wrap">
+                    <h2 className="project__header_title title_h2">{`Разработка ${service.title}`}</h2>
+                    <div className="project__header_descr">{service.pageDescr}</div>
+                    <div className="project__header_buttons">
                         <Link to={`/brif/${service.buttonLink}`} href=""><button className="button button_blue">Заполнить бриф</button></Link>
                         <a href='#price'><button className="button button_white">Цены</button></a>
                     </div>

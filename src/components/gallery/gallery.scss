@@ -9,10 +9,20 @@
         margin-top: 80px;
         img {
             margin-bottom: 10px;
+            max-width: 100%;
         }
     }
     a {
         display: block;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        &__wrap img{
+            width: 100%;
+        }
+    
     }
 }

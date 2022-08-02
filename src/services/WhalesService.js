@@ -14,7 +14,7 @@ const useWhalesService = () => {
         "services": [
             {
                 name: 'Айдентика',
-                title: 'Айдентики',
+                title: 'Фирменного стиля',
                 descr: 'Мы занимаемся дизайном логотипов, элементов фирменного стиля', 
                 id: 1, 
                 link: 'identity', 

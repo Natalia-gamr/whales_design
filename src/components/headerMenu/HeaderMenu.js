@@ -1,10 +1,8 @@
 import { Link, NavLink, useLocation} from 'react-router-dom';
-import useWhalesService from '../../services/WhalesService';
 import { useState } from 'react';
 
 import '../../style/style.scss'
 import './headerMenu.scss'
-import logo from '../../resources/icons/logo.svg'
 
 
 const HeaderMenu = () => {

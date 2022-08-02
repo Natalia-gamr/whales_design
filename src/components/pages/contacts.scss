@@ -46,3 +46,53 @@
     }
         
 }
+
+@media (max-width: 760px) {
+    .contacts {
+        &__title {
+           font-size: 140px;
+        }
+        &__descr {
+            &_img {
+                width: 424px;
+                max-width: 100%;
+                left: 0;
+                bottom: 160px;
+            }
+        }
+        &__items {
+            &_link {
+               font-size: 15px;
+            }
+        }
+        
+            
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts {
+        &__title {
+           font-size: 50px;
+        }
+        &__descr {
+            margin-bottom: 0;
+            flex-direction: column;
+            &_img {
+                width: 216px;
+                left: 25%;
+                bottom: 61px;
+            }
+        }
+        &__info {
+            margin: 10px;
+        }
+        &__items {
+            &_link {
+               font-size: 13px;
+            }
+        }
+        
+            
+    }
+}

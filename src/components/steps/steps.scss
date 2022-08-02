@@ -1,13 +1,11 @@
 .steps {
-    margin: 100px auto;
-    
-        
-    &_wrap {
+    padding: 100px 0;
+    &__wrap {
         display: flex;
         position: relative;
         margin-top: 50px;
     }
-    &_item {
+    &__item {
         position: relative;
         flex-basis: 22%;
         div:nth-child(2) {
@@ -20,15 +18,14 @@
             border-radius: 50%;
             top: 24px;
             left: 37px;
-            z-index: -1;
-            
+            z-index: -1;   
         }
         &:nth-child(2n) {
             position: relative;
             top: 25px;
         }
     }
-    &_number {
+    &__number {
         font-weight: 900;
         font-size: 70px;
         line-height: 145%;
@@ -37,7 +34,15 @@
         -webkit-text-stroke: 1px blue;
         color: white;
     }
-    
-    
+}
 
+@media (max-width: 768px) {
+    .steps {
+        &__wrap {
+            flex-wrap: wrap;
+        }
+        &__item {
+            flex-basis: 35%;
+        }
+    }
 }

@@ -158,17 +158,26 @@
             max-width: 100%;
         }
         &__maps {
+            &_info {
+                display: flex;
+                flex-direction: column-reverse;
+                align-content: flex-start;
+                margin: 0;
+            }
             &_img {
                 max-width: 100%;
-                margin-right: 20px;
-                margin-top: 180px;
+               
             }
             &_stat {
-                top: 20px;
+                position: relative;
+                margin: 0;
                 span {
                     font-size: 20px;
                     top: 0;
                 }
+            }
+            &_qty {
+                margin-bottom: 20px;
             }
             
         }

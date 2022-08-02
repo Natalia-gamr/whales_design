@@ -64,37 +64,7 @@ const Feedback= () => {
                     
                 </Form>
             </Formik>
-            {/* <form action="mailto:ngamr@bk.ru" className="feedback__form">
-                <div className="feedback__form_item">
-                    <p>Ваше имя*</p>
-                    <input type="text" name="name" placeholder="Введите ваше имя"/>
-                </div>
-                <div className="feedback__form_contacts">
-                    <div className="feedback__form_item">
-                        <p>Телефон*</p> 
-                        <input type="tel" name="phone" placeholder="Введите номер телефона"/>
-                    </div>
-                    <div className="feedback__form_item">
-                        <p>Email*</p>
-                        <input type="email" name="email" placeholder="Введите электронный адрес"/>
-                    </div>
-                </div>
-                <div className="feedback__form_item">
-                    <p>Сообщение*</p>
-                    <input type="text" name="message" placeholder="Введите сообщение"/>
-                </div>
-                <div className="feedback__form_submit">
-                    <button type="submit"  className="feedback__form_button button">Отправить</button>
-                    <button type="submit"  className="feedback__form_button_mobile">Отправить</button>               
-                    <div className="feedback__form_check">
-                        <input type="checkbox" id="check" className="feedback__form_checkbox"/>
-                        <label htmlFor="check">Согласие на обработку персональных данных</label>
-                    </div>
-                </div>
-            </form> */}
         </div>
-            
-
     )
 }
 

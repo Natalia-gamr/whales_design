@@ -11,5 +11,25 @@
     &__img {
         margin: 0;
     }
+}
 
+@media (max-width: 768px) {
+    .page404 {
+        &__img {
+            width: 100%;
+            max-width: 438px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .page404 {
+        flex-wrap: wrap;
+        margin-top: 0;
+        &__descr {
+            max-width: 250px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+    }
 }

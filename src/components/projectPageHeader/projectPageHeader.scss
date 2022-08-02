@@ -5,12 +5,6 @@
     &__header {
         display: flex;
         align-items: center;
-    }
-    &__heading {
-        margin-top: 100px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
         &_wrap {
             flex-basis: 434px;
             margin: 0;
@@ -29,9 +23,8 @@
             }
         }
     }
-    
-
 }
+
 .price {
     &__wrap {
         display: flex;
@@ -42,9 +35,7 @@
             margin: 66px 0;
             flex-wrap: wrap;
             .price__item {
-                flex-basis: 298px;
                 &:last-child {
-                    min-width: 668px;
                     .price__descr {
                         margin-top: 197px;
                         max-width: 370px;
@@ -54,7 +45,18 @@
                     }
                 }
             }
-            
+        }
+    }
+    &__flex {
+        display: flex;
+        margin: 0;
+        width: 100%;
+        &:last-child {
+            .price__item {
+                &:last-child {
+                    flex-basis: 73.66%;
+                }
+            }
         }
     }
     &__item {
@@ -91,6 +93,12 @@
     }
     &__cost {
         margin: 40px 0;
+        .price__item {
+            padding: 50px;
+            &:hover {
+
+            }
+        }
     }
     &__items {
         text-align: left;
@@ -111,6 +119,7 @@
         }
     }
 }
+
 .descr {
     padding: 75px 0;
     text-align: left;
@@ -119,6 +128,7 @@
         margin-left: 0;
     }
 }
+
 .info {
     background: $blue;
     color: white;
@@ -136,7 +146,7 @@
     }
     &__item {
         color: white;
-        flex-basis: 45%;
+        flex-basis: 40%;
         padding-bottom: 24px;
         padding-left: 41px;
         margin: 0;
@@ -150,6 +160,138 @@
             top: 25%;
             left: 0;
             background: white;
+        }
+    }
+}
+
+.cost {
+    margin-bottom: 50px;
+    &__wrap {
+        display: flex;
+    }
+    .price__item {
+        flex-basis: 50%;
+    }
+}
+
+
+@media (max-width: 768px ) {
+    .project {
+        &__header {
+            justify-content: space-between;
+            &_wrap {
+                flex-basis: 300px;
+            }
+            &_title {
+                font-size: 20px;
+                max-width: 270px;
+                margin-left: 0;
+            }
+            img {
+                width: 100%;
+                max-width: 300px;
+                margin: 0;
+            }
+        }
+        
+    }
+
+    .price {
+        &__name {
+            font-size: 10px;
+        }
+        &__cost {
+            font-size: 20px;
+        }
+        &__items div {
+            font-size: 10px;
+            &::before {
+                background-size: 70%;
+                background-repeat: no-repeat;
+                top: 3px;
+            }
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 13px;
+        }
+        &__item {
+            padding: 15px;
+        }
+    }
+
+    .cost {
+        &__wrap {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 480px ) {
+    .project {
+        &__header {
+            justify-content: space-between;
+            &_wrap {
+                flex-basis: 300px;
+            }
+            &_title {
+                font-size: 20px;
+                max-width: 270px;
+                margin-left: 0;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .price {
+        &__wrap {
+            flex-wrap: wrap;
+        }
+        &__name {
+            font-size: 10px;
+        }
+        &__cost {
+            font-size: 20px;
+        }
+        &__items div {
+            font-size: 10px;
+            &::before {
+                background-size: 70%;
+                background-repeat: no-repeat;
+                top: 3px;
+            }
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 13px;
+        }
+
+        &__flex {
+            flex-wrap: wrap;
+            &:last-child {
+                .price__item {
+                    &:last-child {
+                        flex-basis: 100%;
+                    }
+                }
+            }
+            
+        }
+        &__item {
+            padding: 15px;
+            flex-basis: 100%;
+        }
+    }
+    
+    .cost {
+        &__wrap {
+            display: flex;
         }
     }
 }

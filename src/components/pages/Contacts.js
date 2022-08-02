@@ -9,7 +9,7 @@ const Contacts = () => {
             <div className="contacts__title">Hello</div>
             <div className="contacts__descr">
                 <img src={walkingDrone} alt="" className="contacts__descr_img"/>
-                <div>
+                <div className='contacts__info'>
                     <div className="contacts__items">
                         <div className="title_15px">Телефон</div>
                         <a className="contacts__items_link" href="tel:+380977575151">+38 (097) 757 51 51</a>

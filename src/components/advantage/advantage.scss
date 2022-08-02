@@ -1,7 +1,7 @@
 
 .advantage {
     margin-bottom: 130px;
-    &_wrap {
+    &__wrap {
         flex-basis: 22%;
         margin-top: 70px;
         img {
@@ -9,12 +9,32 @@
             height: 50px;
         }
     }
-    &_items {
+    &__items {
         display: flex;
         justify-content: space-between;
     }
 }
 
 @media (max-width: 768px) {
-    
+    .advantage {
+        &__items {
+            flex-wrap: wrap;
+        }
+        &__wrap {
+            flex-basis: 45%;
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .advantage {
+        &__items {
+            flex-wrap: wrap;
+        }
+        &__wrap {
+            flex-basis: 55%;
+            margin-left: 0;
+        }
+    }
 }

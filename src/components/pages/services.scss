@@ -88,3 +88,27 @@
     }
     
 }
+
+@media (max-width: 768px) {
+    .services {
+        &__title {
+            font-size: 150px;
+        }
+        &__item {
+            width: 100%;
+            max-width: 250px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        &__title {
+            font-size: 50px;
+        }
+        &__item {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+}

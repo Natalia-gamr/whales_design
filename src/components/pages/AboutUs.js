@@ -41,12 +41,15 @@ const AboutUs = () => {
             </div>
             <div className="about__maps">
                 <div className="title_h3">География наших клиентов</div>
-                <img src={maps} alt="" className="about__maps_img"/>
-                <div className="about__maps_stat">
-                    <div className="about__maps_qty"><span>55+</span>стран по всему миру</div>
-                    <div className="about__maps_qty"><span>235+</span>довольных клиентов</div>
-                    <div className="about__maps_qty"><span>10 000+</span>часов работы</div>
+                <div className="about__maps_info">
+                    <img src={maps} alt="" className="about__maps_img"/>
+                    <div className="about__maps_stat">
+                        <div className="about__maps_qty"><span>55+</span>стран по всему миру</div>
+                        <div className="about__maps_qty"><span>235+</span>довольных клиентов</div>
+                        <div className="about__maps_qty"><span>10 000+</span>часов работы</div>
+                    </div>
                 </div>
+                
             </div>
         </section>
    

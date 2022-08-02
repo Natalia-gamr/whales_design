@@ -37,75 +37,79 @@ export const IdentityPrice = () => {
         <div className="price container">
             <div className="title title_h3">Цены</div>
             <div className="price__wrap_five">
-                <div className="price__item">
-                    <div className="price__name">Стартап</div>
-                    <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
-                    <div className="price__items">
-                        <div>Логотип</div>
-                        <div>Цветовая схема</div>
-                        <div>Типография</div>
-                        <div>Визитка</div>
-                        <div>Фирменный бланк</div>
-                        <div>Папка</div>
-                        <div>Конверт</div>
+                <div className='price__flex'>
+                    <div className="price__item">
+                        <div className="price__name">Стартап</div>
+                        <div className="price__cost title_h2">₴0 000</div>
+                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <div className="price__items">
+                            <div>Логотип</div>
+                            <div>Цветовая схема</div>
+                            <div>Типография</div>
+                            <div>Визитка</div>
+                            <div>Фирменный бланк</div>
+                            <div>Папка</div>
+                            <div>Конверт</div>
+                        </div>
+                    </div>
+                    <div className="price__item">
+                        <div className="price__name">Компания</div>
+                        <div className="price__cost title_h2">₴0 000</div>
+                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <div className="price__items">
+                            <div>Услуги пакета "Стартап"</div>
+                            <div>Паттерн/формы</div>
+                            <div>Иконки</div>
+                            <div>Иллюстрация</div>
+                            <div>Оформление соц. сетей</div>
+                        </div>
+                    </div>
+                    <div className="price__item">
+                        <div className="price__name"> Корпорация</div>
+                        <div className="price__cost title_h2">₴0 000</div>
+                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <div className="price__items">
+                            <div>Услуги пакета "Компания"</div>
+                            <div>Маскот/Персонаж
+                            </div>
+                            <div>Изображения (подбор стиля)
+                            </div>
+                            <div>Брендбук</div>
+                        </div>
                     </div>
                 </div>
-                <div className="price__item">
-                    <div className="price__name">Компания</div>
-                    <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
-                    <div className="price__items">
-                        <div>Услуги пакета "Стартап"</div>
-                        <div>Паттерн/формы</div>
-                        <div>Иконки</div>
-                        <div>Иллюстрация</div>
-                        <div>Оформление соц. сетей</div>
+                <div className='price__flex'>
+                    <div className="price__item">
+                        <div className="price__name"> Ресторан</div>
+                        <div className="price__cost title_h2">₴0 000</div>
+                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <div className="price__items">
+                            <div>Услуги пакета "Стартап"</div>
+                            <div>Меню</div>
+                            <div>Винная карта
+                            </div>
+                            <div>Коктейльная карта
+                            </div>
+                            <div>Бирдекель/Костер
+                            </div>
+                            <div>Счетница</div>
+                            <div>Форма персонала
+                            </div>
+                            <div>Плейсмат</div>
+                            <div>Резерв</div>
+                            <div>Оформление соц. сетей</div>
+                        </div>
                     </div>
-                </div>
-                <div className="price__item">
-                    <div className="price__name"> Корпорация</div>
-                    <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
-                    <div className="price__items">
-                        <div>Услуги пакета "Компания"</div>
-                        <div>Маскот/Персонаж
+                    <div className="price__item">
+                        <div className="price__name"> Индивидуальный</div>
+                        <div className="price__descr">
+                            <div className="price__title title_h2">Уникальный проект?
+                            </div>
+                            <div className="price__text">Мы в деле! Давайте обсудим условия подходящие, именно для вас!</div>
+                            <button className="button button_white">Заказать</button>
                         </div>
-                        <div>Изображения (подбор стиля)
-                        </div>
-                        <div>Брендбук</div>
                     </div>
-                </div>
-                <div className="price__item">
-                    <div className="price__name"> Ресторан</div>
-                    <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
-                    <div className="price__items">
-                        <div>Услуги пакета "Стартап"</div>
-                        <div>Меню</div>
-                        <div>Винная карта
-                        </div>
-                        <div>Коктейльная карта
-                        </div>
-                        <div>Бирдекель/Костер
-                        </div>
-                        <div>Счетница</div>
-                        <div>Форма персонала
-                        </div>
-                        <div>Плейсмат</div>
-                        <div>Резерв</div>
-                        <div>Оформление соц. сетей</div>
-                    </div>
-                </div>
-                <div className="price__item">
-                    <div className="price__name"> Индивидуальный</div>
-                    <div className="price__descr">
-                        <div className="price__title title_h2">Уникальный проект?
-                        </div>
-                        <div className="price__text">Мы в деле! Давайте обсудим условия подходящие, именно для вас!</div>
-                        <button className="button button_white">Заказать</button>
-                    </div>
-                </div>
+                </div>   
             </div>
         </div> 
    
@@ -118,4 +122,3 @@ export const IdentityImg = () => {
     )
 }
 
-// export default {Identity, IdentityDescr}

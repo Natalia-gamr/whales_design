@@ -5,11 +5,11 @@ export const PresentPrice = () => {
         <>
         <div className="cost">
             <div className="title title_h3">Цены</div>
-            <div className="cost_wrap">
-                <div className="cost_item">
+            <div className="cost__wrap">
+                <div className="price__item">
                     <div className="cost_title"><p>от <span className="title_h2">₴000</span>/слайд</p>(зависит от сложности проекта)
                     </div>
-                    <div className="cost_items">
+                    <div className="price__items">
                         <div>От 1 дня</div>
                         <div>Несколько дизайнеров</div>
                         <div>Премиум качество 
@@ -23,7 +23,7 @@ export const PresentPrice = () => {
                         <button className="button button_blue">Заказать</button>
                     </a>
                 </div>
-                <div className="cost_item">
+                <div className="price__item">
                     <div className=" title_h2">Что входит в финальную стоимость:</div>
                     <div className="cost_items">
                         <div>Обработка предоставленной информации</div>
