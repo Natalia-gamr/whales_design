@@ -69,11 +69,7 @@ const Portfolio = () => {
                             <Link to='/singlePage'><img src={ImageShape9} alt="" /></Link>  
                             <Link to='/singlePage'><img src={ImageShape8} alt="" /></Link>  
                             <Link to='/singlePage'><img src={ImageShape9} alt="" /></Link>  
-                            <Link to='/singlePage'></Link>  
-                            <Link to='/singlePage'></Link>  
-                            <Link to='/singlePage'></Link>  
-                            <Link to='/singlePage'></Link>  
-                            <Link to='/singlePage'></Link> 
+                       
                         </TabPanel>
                         <TabPanel id="tabcontent" className="portfolio__content_item">
                             <Link to='/singlePage'><img src={ImageShape9} alt="" /></Link>  
