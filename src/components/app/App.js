@@ -5,7 +5,7 @@ import Spinner from "../spinner/Spinner"
 
 
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import ProjectPageHeader from "../projectPageHeader/ProjectPageHeader";
 
 const Page404 = lazy(() => import('../pages/Page404'));
@@ -16,11 +16,6 @@ const AboutUs = lazy(() => import('../pages/AboutUs'));
 const Contacts = lazy(() => import('../pages/Contacts'));
 const Brif = lazy(() => import('../pages/Brif'));
 const SinglePage = lazy(() => import('../singlePage/SinglePage'));
-// const Identity = lazy(() => import('../pages/identity/Identity'));
-// const Creativ = lazy(() => import('../projectPageHeader/creativ/Creativ'));
-// const Logo = lazy(() => import('../pages/logo/Logo'));
-// const Websites = lazy(() => import('../pages/websites/Websites'));
-// const Presentation = lazy(() => import('../pages/presentation/Presentation'));
 
 const App = () => {
 
@@ -38,11 +33,6 @@ const App = () => {
                     <Route index path='/brif/:descr' element={<Brif/>}/>
                     <Route index path='/:link' element={<ProjectPageHeader/>}/>
                     <Route path='/singlePage' element={<SinglePage/>} exact/>
-                    {/* <Route path ='/identity' element={<Identity/>}/>
-                    <Route path ='/creativ' element={<Creativ/>}/>
-                    <Route path ='/logo' element={<Logo/>}/>
-                    <Route path ='/websites' element={<Websites/>}/>
-                    <Route path ='/presentation' element={<Presentation/>}/> */}
                 </Routes>
             </Suspense>
             <Footer/>
