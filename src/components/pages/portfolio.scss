@@ -58,6 +58,11 @@
     .portfolio {
         &__category {
             max-width: 410px;
+            width: 100%;
+            padding: 10px;
+            &_link {
+                margin: 0 auto;
+            }
         }
     }
 }
