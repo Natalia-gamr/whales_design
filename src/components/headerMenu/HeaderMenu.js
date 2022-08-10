@@ -55,7 +55,7 @@ const HeaderMenu = () => {
                         <li><NavLink to='/services' onClick={buttonToggle}  className="header__link link_15px">Услуги и цены</NavLink></li>
                         <li><NavLink to='/about_us' onClick={buttonToggle} className="header__link link_15px">Мы</NavLink></li>
                         <li><NavLink to='/contacts' onClick={buttonToggle} className="header__link link_15px">Контакты</NavLink></li>
-                        <button className="header__menu_burger_button button">Обсудить проект</button>
+                        <OpenModal title="Обсудить проект" className="header__menu_burger_button">Обсудить проект</OpenModal>
                     </ul>
                 </div>
                 <ul className="header__menu">

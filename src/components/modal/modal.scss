@@ -1,8 +1,10 @@
 @import '../../style/variables';
 
 .modal {
-    width: 1200px;
-    height: 474px;
+    width: 80%;
+    height: 50%;
+    max-width: 1200px;
+    max-height: 474px;
     border: 1px solid black;
     background: white;
     z-index: 100;
@@ -103,6 +105,66 @@
         margin-bottom: 50px;
         
         
+    }
+}
+
+@media (max-width:768px) {
+    .modal {
+        max-width: 691px;
+        &__form {
+            padding: 10px;
+            &_check {
+                max-width: 200px;
+            }
+
+        }
+        
+        
+        &__flex{
+            flex-wrap: wrap;
+           div {
+                flex-basis: 45%;
+                &:first-child {
+                    flex-basis: 100%;
+                    margin-bottom: 20px;
+                } 
+            } 
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .modal {
+        max-width: 480px;
+        width: 100%;
+        max-height: 543px;
+        height: 60%;
+        &__form {
+            padding: 10px;
+            &_submit {
+                margin: 0;
+                flex-direction: column;
+                div:first-child {
+                    max-width: 100%;
+                    margin: 20px 10px;
+                }
+            }
+        }
+        &__file {
+            margin: 0 -10px;
+            max-width: 100%;
+            svg, label {
+                margin: 0;
+            }
+        }
+        &__flex{
+            flex-wrap: wrap;
+            margin-bottom: 0;
+           div {
+                flex-basis: 100%;
+                margin-bottom: 30px;
+            } 
+        }
     }
 }
 
