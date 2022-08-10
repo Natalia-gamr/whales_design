@@ -49,6 +49,7 @@
         &_item {
             border-bottom: 1px solid $white;
             color: $white;
+            position: relative;
             
         }    
         &_contacts {
@@ -84,13 +85,14 @@
         &_check {
             position:relative;
             padding-left:25px;
-            opacity: 0.8;
+            opacity: 1;
             display: flex;
             label {
                 font-size: 10px;
                 line-height: 145%;
                 margin-left: 6px;
                 padding-top: 2px;
+                opacity: 0.8;
             }
             input {
                 opacity: 1;
@@ -98,7 +100,7 @@
                 left: -3px;
                 width: 0px;
                 height: 0px;
-                
+                cursor: pointer;
             }
             input:before {
                 content:'';

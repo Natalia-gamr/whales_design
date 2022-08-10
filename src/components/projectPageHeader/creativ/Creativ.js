@@ -1,6 +1,8 @@
 import creative from '../../../resources/img/LDR.png'
+import OpenModal from '../../modal/Modal';
 
 export const CreativePrice = () => {
+    
     return (
             <div>
                 <div className="title_h3">Цены</div>
@@ -8,7 +10,7 @@ export const CreativePrice = () => {
                     <div className="price__item">
                         <div className="price__name">Обычный</div>
                         <div className="price__cost title_h2">₴0 000</div>
-                        <a href=""><button className="button button_white">Заказать</button></a>
+                        < OpenModal className='button_white' title="Заказать"/>
                         <div className="price__items">
                             <div>3 дня</div>
                             <div>Премиальное качество
@@ -19,7 +21,7 @@ export const CreativePrice = () => {
                     <div className="price__item">
                         <div className="price__name">Стандартный</div>
                         <div className="price__cost title_h2">₴0 000</div>
-                        <a href=""><button className="button button_white">Заказать</button></a>
+                        < OpenModal className='button_white' title="Заказать"/>
                         <div className="price__items">
                             <div>2 дня</div>
                             <div>3 правки
@@ -34,8 +36,7 @@ export const CreativePrice = () => {
                     </div>
                     <div className="price__item">
                         <div className="price__name"> Профессиональный</div>
-                        <div className="price__cost title_h2">₴0 000</div>
-                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <div className="price__cost title_h2">₴0 000</div>                        < OpenModal className='button_white' title="Заказать"/>
                         <div className="price__items">
                             <div>1 день
                             </div>

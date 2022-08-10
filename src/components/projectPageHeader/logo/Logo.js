@@ -1,4 +1,5 @@
 import logo from '../../../resources/img/WFH.png'
+import OpenModal from '../../modal/Modal'
 
 export const LogoPrice = () => {
     return (
@@ -8,7 +9,7 @@ export const LogoPrice = () => {
                 <div className="price__item">
                     <div className="price__name">Обычный</div>
                     <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
+                    <OpenModal className='button_white' title="Заказать"/>
                     <div className="price__items">
                         <div>2 концепции, 3 правки</div>
                         <div>3 дня</div>
@@ -20,7 +21,7 @@ export const LogoPrice = () => {
                 <div className="price__item">
                     <div className="price__name">Стандартный</div>
                     <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
+                    <OpenModal className='button_white' title="Заказать"/>
                     <div className="price__items">
                         <div>3 концепции, 5 правок</div>
                         <div>2 дня</div>
@@ -32,7 +33,7 @@ export const LogoPrice = () => {
                 <div className="price__item">
                     <div className="price__name"> Максимальный</div>
                     <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
+                    <OpenModal className='button_white' title="Заказать"/>
                     <div className="price__items">
                         <div>5 концепции, 7 правок</div>
                         <div>3 дня</div>

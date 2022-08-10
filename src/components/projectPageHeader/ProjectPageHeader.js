@@ -68,10 +68,11 @@ const ProjectPageHeader = () => {
             </div>
             {serviceLink === 'identity' ? <IdentityDescr/> : <></>}
             <Steps/>
+            <Gallery/>
             <div id="price" className="price container">
                 <Price/>
             </div>
-            <Gallery/>
+            
             <Advantage/>
         </>
         

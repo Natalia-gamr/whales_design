@@ -1,5 +1,6 @@
 import { Link, NavLink, useLocation} from 'react-router-dom';
 import { useState } from 'react';
+import OpenModal from '../modal/Modal';
 
 import '../../style/style.scss'
 import './headerMenu.scss'
@@ -63,9 +64,10 @@ const HeaderMenu = () => {
                     <li><NavLink to='/about_us' className="header__link link_15px">Мы</NavLink></li>
                     <li><NavLink to='/contacts' className="header__link link_15px">Контакты</NavLink></li>
                 </ul>
+                {/* eslint-disable-next-line */}
                 <a href='tel:+380977575151' className="header__tel link_13px">+38 (097) 757 51 51</a>
                 <div className='header__button'>
-                    <button className={(pathname === '/singlePage' ? 'button button_white' : 'button button_blue')}>Обсудить проект</button>
+                    <OpenModal title="Обсудить проект" className={(pathname === '/singlePage' ? 'button button_white' : 'button button_blue')}>Обсудить проект</OpenModal>
                 </div>
             </div>
         </header>

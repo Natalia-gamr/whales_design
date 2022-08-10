@@ -1,12 +1,35 @@
-import React from "react"
-import { Field, Formik, Form } from "formik"
+import { useField, Formik, Form, Field } from "formik"
+import * as Yup from 'yup'
+
 import './feedback.scss'
 import FeedbackImg from '../../resources/img/mail_form.png'
 
-const Feedback= () => {
 
+const MyTextInput = ({label, ...props}) => {
+    const [field, meta] = useField(props);
     return (
+        <div className="feedback__form_item">
+            <label htmlFor={props.id || props.name}>{label}</label>
+            <input {...field} {...props} value={props.value}/>
+            {meta.touched && meta.error ? (
+                <p className="error">{meta.error}</p>
+            ) : null}
+        </div>
+    )
+}
 
+const SignupSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
+    number: Yup.number().required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'),
+    check: Yup.bool().oneOf([true],'check please').required('Required'),
+  });
+
+const Feedback= () => {
+    return (
         <div className="feedback">
             <div className="feedback__heading">
                 <div className="feedback__title title_h3">Обсудить проект</div>
@@ -15,54 +38,62 @@ const Feedback= () => {
             </div>
 
             <Formik
+
                 initialValues={{
                     name: '',
-                    phone: '',
+                    number: '',
                     email: '',
-                    mesasge: '',
-                    checked: [],
+                    message: '',
+                    check: false,
                 }}
-                onSubmit={async (values) => {
-                    await new Promise((r) => setTimeout(r, 500));
+                validationSchema={SignupSchema}
+
+                onSubmit={(values, {setSubmitting}) => {
+                    setTimeout(() => {
+                        alert(JSON.stringify(values, null, 2));
+                        setSubmitting(false);
+                    }, 400)
                 }}
                 >
-                <Form className="feedback__form">
-                    <div className="feedback__form_item">
-                        <label htmlFor="name">Ваше имя*</label>
-                        <Field id="name" name="name" placeholder="Введите ваше имя" />
-                    </div>
-                    <div className="feedback__form_contacts">
-                        <div className="feedback__form_item">
-                            <label htmlFor="phone">Телефон*</label>
-                            <Field id="phone" name="phone" placeholder="Введите номер телефона" />
-                        </div>
-                        <div className="feedback__form_item">
-                        <label htmlFor="email">Email*</label>
-                            <Field
-                            id="email"
-                            name="email"
-                            placeholder="Введите электронный адрес"
-                            type="email"
+                {({errors}) => (
+                    <Form className="feedback__form">
+                        <MyTextInput
+                            label='Ваше имя*'
+                            name='name'
+                            type='text'
+                            placeholder='Введите ваше имя'
+                        />
+                        <div className="feedback__form_contacts">
+                            <MyTextInput
+                                label='Телефон*'
+                                name='number'
+                                type='text'
+                                placeholder='Введите номер телефона'
+                            />
+                            <MyTextInput
+                                label='Email*'
+                                name='email'
+                                type='email'
+                                placeholder='Введите электронный адрес'
                             />
                         </div>
-                    </div>
-                    <div className="feedback__form_item">
-                        <label htmlFor="message">Сообщение*</label>
-                        <Field
-                        id="message"
-                        name="message"
-                        placeholder="Введите сообщение"
-                        />
-                    </div>
-                    <div className="feedback__form_submit">
-                        <button type="submit"  className="feedback__form_button button">Отправить</button>
-                    <div className="feedback__form_check">
-                        <input type="checkbox" id="check" required/>
-                        <label className="check" htmlFor="check">Согласие на обработку персональных данных</label>
-                    </div>
-                    </div>
+                        <MyTextInput
+                            label='Сообщение*'
+                            name='message'
+                            type='text'
+                            placeholder='Введите сообщение'
+                        />                
                     
-                </Form>
+                        <div className="feedback__form_submit">
+                            <button type="submit"  className="feedback__form_button button">Отправить</button>
+                            <div className="feedback__form_check">
+                                <Field type="checkbox" name='check' required/>
+                                <label className="check" htmlFor="check">Согласие на обработку персональных данных</label>
+                                {errors.check && <p className="error error__check">{errors.check}</p>}
+                            </div>
+                        </div>
+                    </Form>
+                )}
             </Formik>
         </div>
     )

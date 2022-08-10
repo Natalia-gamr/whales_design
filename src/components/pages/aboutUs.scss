@@ -98,6 +98,7 @@
     .about {  
         &__title {
             max-width: 520px;
+            margin-bottom: 100px;
             &_h1 {
                 font-size: 140px;
                 span {
@@ -111,9 +112,15 @@
         }
         &__descr {
            flex-direction: column;
+           margin-bottom: 50px;
+           &_text {
+            max-width: 606px;
+            flex-basis: 0;
+           }
         }  
         &__items {
            flex-wrap: wrap;
+           margin-bottom: 70px;
         }
         &__item {
             flex-basis: 50%;

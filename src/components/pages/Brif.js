@@ -3,14 +3,16 @@ import {useParams} from "react-router-dom"
 
 import'./brif.scss'
 import { useState } from "react";
-import { Formik, Form, useField } from "formik";
+import { Formik, Form, useField, Field } from "formik";
+import * as Yup from 'yup'
+
 
 const MyTextInput = ({label, ...props}) => {
     const [field, meta] = useField(props);
     return (
         <div className="brif__item">
             <label htmlFor={props.id || props.name}>{label}</label>
-            <input className="text-input" {...field} {...props} />
+            <input {...field} {...props} />
             {meta.touched && meta.error ? (
                 <div className="error">{meta.error}</div>
             ) : null}
@@ -23,14 +25,14 @@ const MyCheckbox = ({ children, ...props }) => {
     return (
       <div>
         <label className="brif__checkbox"> 
-            <input className="hidden-checkbox" type="checkbox"/>
+            <Field className="hidden-checkbox" type="checkbox" name={`${props.name}`}/>
             <div className="checkbox"> 
                 <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ffffff" d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
             </div>
             {children}
         </label>
         {meta.touched && meta.error ? (
-          <div className="error">{meta.error}</div>
+          <p className="error">{meta.error}</p>
         ) : null}
       </div>
     );
@@ -48,7 +50,19 @@ const MyCheckbox = ({ children, ...props }) => {
     );
   };
 
- const Brif = () => {
+const SignupSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
+    number: Yup.number().required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'),
+    companyName: Yup.string(),
+    fieldOfActivity: Yup.string(),
+});
+
+
+const Brif = () => {
 
     const {arr} = useWhalesService()
 
@@ -81,14 +95,19 @@ const MyCheckbox = ({ children, ...props }) => {
                         saleCheck: false,
                         siteFunctionality: 'sertificate',
                     }}
+
+                    validationSchema={SignupSchema}
+
                     onSubmit={(values, {setSubmitting}) => {
                         setTimeout(() => {
                             alert(JSON.stringify(values, null, 2));
                             setSubmitting(false);
                         }, 400)
                     }}
-                >
+                > 
+                {() => (
                     <Form className={`container brif__items${isActive ? '' : '_block'}`}>
+                        
                         <div className="title_h3">Ваши данные</div>
                         <MyTextInput 
                             label='Ваше имя*'
@@ -125,7 +144,7 @@ const MyCheckbox = ({ children, ...props }) => {
                         />
                         <div className="title_h3">Дизайн</div>
                         <MyCheckbox name="sertificateCheck">
-                            Сертификаты, награды и прочие документы?    
+                            Сертификаты, награды и прочие документы?  
                         </MyCheckbox>
                         <MyCheckbox name="priceCheck">
                             Не завышена ли цена?
@@ -143,13 +162,22 @@ const MyCheckbox = ({ children, ...props }) => {
                             <option value="analogue">Как выбрать среди большого количества аналогов?</option>
                             <option value="sale">Есть какие-то скидки\акции?</option>
                         </MySelect>
+                       
                         <div className="title_h3">Загрузить файл</div>
                         <div className="brif__file">
-                            <label  id="label" htmlFor=""><span>Загрузить файлы <br/>Перетащить сюда или <a href="">выбрать</a></span></label>
+                            
+                            <label  id="label" htmlFor="">
+                                
+                                <span>Загрузить файлы <br/>Перетащить сюда или 
+                                {/* eslint-disable-next-line */}
+                                <a href="">выбрать</a></span>
+                            </label>
                             <input  type="file"/>
                         </div>
                         <button type="submit" className={isActive ? 'brif__items' : 'button button_blue'}>Дальше</button>
                     </Form>
+                )}
+                    
                 </Formik>                     
             </>
         )

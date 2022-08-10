@@ -1,5 +1,6 @@
 import '../../../style/style.scss'
 import Carousel from '../../carousel/Carousel';
+import OpenModal from '../../modal/Modal';
 import './appHeader.scss'
 
 
@@ -13,7 +14,7 @@ const AppHeader = () => {
                 <div className="main__descr">
                     <div className="main__name title_h5">Whales Design</div>
                     <div className="main__title title_h3">Мы помогаем зарабатывать в интернете</div>
-                    <div href="#feedback"><button className="main__button button">Обсудить проект</button></div>
+                    <OpenModal title="Обсудить проект" className="main__button">Обсудить проект</OpenModal>
                 </div>
                 <Carousel/>
             </div>

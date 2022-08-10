@@ -85,6 +85,19 @@ a {
     }
 }     
 
+.error {
+    position: absolute;
+    color: $red;
+    font-size: 10px;
+    font-weight: bold;
+    top: 70px;
+    &__check {
+        top: 20px;
+        left: 32px;
+    }
+
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 30px;

@@ -1,4 +1,5 @@
 import identity from '../../../resources/img/High_Five.png'
+import OpenModal from '../../modal/Modal'
 
 export const IdentityDescr = () => {
     return (
@@ -41,7 +42,7 @@ export const IdentityPrice = () => {
                     <div className="price__item">
                         <div className="price__name">Стартап</div>
                         <div className="price__cost title_h2">₴0 000</div>
-                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <OpenModal className='button_white' title="Заказать"/>
                         <div className="price__items">
                             <div>Логотип</div>
                             <div>Цветовая схема</div>
@@ -55,7 +56,7 @@ export const IdentityPrice = () => {
                     <div className="price__item">
                         <div className="price__name">Компания</div>
                         <div className="price__cost title_h2">₴0 000</div>
-                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <OpenModal className='button_white' title="Заказать"/>
                         <div className="price__items">
                             <div>Услуги пакета "Стартап"</div>
                             <div>Паттерн/формы</div>
@@ -67,7 +68,7 @@ export const IdentityPrice = () => {
                     <div className="price__item">
                         <div className="price__name"> Корпорация</div>
                         <div className="price__cost title_h2">₴0 000</div>
-                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <OpenModal className='button_white' title="Заказать"/>
                         <div className="price__items">
                             <div>Услуги пакета "Компания"</div>
                             <div>Маскот/Персонаж
@@ -82,7 +83,7 @@ export const IdentityPrice = () => {
                     <div className="price__item">
                         <div className="price__name"> Ресторан</div>
                         <div className="price__cost title_h2">₴0 000</div>
-                        <a href=""><button className="button button_white">Заказать</button></a>
+                        <OpenModal className='button_white' title="Заказать"/>
                         <div className="price__items">
                             <div>Услуги пакета "Стартап"</div>
                             <div>Меню</div>
@@ -106,7 +107,7 @@ export const IdentityPrice = () => {
                             <div className="price__title title_h2">Уникальный проект?
                             </div>
                             <div className="price__text">Мы в деле! Давайте обсудим условия подходящие, именно для вас!</div>
-                            <button className="button button_white">Заказать</button>
+                            <OpenModal className='button_white' title="Заказать"/>
                         </div>
                     </div>
                 </div>   

@@ -1,4 +1,5 @@
 import present from '../../../resources/img/Office_Gal.png'
+import OpenModal from '../../modal/Modal'
 
 export const PresentPrice = () => {
     return (
@@ -19,13 +20,11 @@ export const PresentPrice = () => {
                         <div>Подготовка финальных файлов
                         </div>
                     </div>
-                    <a href="">
-                        <button className="button button_blue">Заказать</button>
-                    </a>
+                    < OpenModal className='button_blue' title="Заказать"/>
                 </div>
                 <div className="price__item">
                     <div className=" title_h2">Что входит в финальную стоимость:</div>
-                    <div className="cost_items">
+                    <div className="price__items">
                         <div>Обработка предоставленной информации</div>
                         <div>Разработка дизайн концепции оформления презентации</div>
                         <div>Демонстрация дизайн-концепции на примере нескольких страниц/слайдов</div>
@@ -43,7 +42,7 @@ export const PresentPrice = () => {
                 <div className="price__item">
                     <div className="price__name">Обычный</div>
                     <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
+                    < OpenModal className='button_white' title="Заказать"/>
                     <div className="price__items">
                         <div>3 дня</div>
                         <div>Премиальное качество
@@ -54,7 +53,7 @@ export const PresentPrice = () => {
                 <div className="price__item">
                     <div className="price__name">Стандартный</div>
                     <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
+                    < OpenModal className='button_white' title="Заказать"/>
                     <div className="price__items">
                         <div>2 дня</div>
                         <div>3 правки
@@ -70,7 +69,7 @@ export const PresentPrice = () => {
                 <div className="price__item">
                     <div className="price__name"> Профессиональный</div>
                     <div className="price__cost title_h2">₴0 000</div>
-                    <a href=""><button className="button button_white">Заказать</button></a>
+                    < OpenModal className='button_white' title="Заказать"/>
                     <div className="price__items">
                         <div>1 день
                         </div>
